@@ -2,7 +2,7 @@
 _Linus Bein Fahlander_\
 _linusfa@kth.se_
 
-**_This file can be read on the public github repository with Markdown formatting._**
+**_This file can be read on the [public github](https://github.com/LinusBF/iv1013-hashing/blob/master/REPORT.md) repository with Markdown formatting._**
 
 ## 2.1 Generating Message Digest and MAC
 ### Q1
