@@ -1,5 +1,4 @@
 import java.io.UnsupportedEncodingException;
-import java.util.Arrays;
 
 public class BitDiffCalculator {
     static String textEncoding = "UTF-8";
@@ -19,7 +18,7 @@ public class BitDiffCalculator {
         for(byte b : xorBytes){
             diffCount += Integer.bitCount(b);
         }
-        System.out.println(diffCount);
+        System.out.println("Number of differing bits: " + diffCount);
     }
 
     public static void printBytes(byte[] bs) {

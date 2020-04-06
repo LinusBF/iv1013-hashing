@@ -30,9 +30,7 @@ public class SHABruteForce {
             byte[] testBytes = get4ByteArrFromInt(i);
             byte[] testDigest = getDigest(testBytes);
             if(Arrays.equals(new byte[]{testDigest[0], testDigest[1], testDigest[2]}, targetHash)){
-                FlipFirstBit.printBytesAsString(testBytes);
-                FlipFirstBit.printBytesAsString(targetHash);
-                FlipFirstBit.printBytesAsString(new byte[]{testDigest[0], testDigest[1], testDigest[2]});
+                printCollisionMessage(testBytes);
                 break;
             }
         }
@@ -52,5 +50,12 @@ public class SHABruteForce {
         MessageDigest md = MessageDigest.getInstance(digestAlgorithm);
         md.update(toDigest);
         return md.digest();
+    }
+
+    private static void printCollisionMessage(byte[] collision) {
+        for(byte b : collision) {
+            System.out.print("0x" + Integer.toHexString(b) + " ");
+        }
+        System.out.println();
     }
 }
